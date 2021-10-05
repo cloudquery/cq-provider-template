@@ -1,1 +1,1 @@
-See documentation at https://docs.cloudquery.io/developers/developing-new-provider
+See documentation at https://docs.cloudquery.io/docs/developers/developing-new-provider/
