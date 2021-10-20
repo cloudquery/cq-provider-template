@@ -1,0 +1,32 @@
+.DS_store
+crash.log
+.idea
+.vscode
+cloudquery
+cloudquery.db
+cloudquery.zip
+/config.yml
+dist/
+vendor/
+bin/
+.release-env
+cq-provider-aws
+*.exe
+*.log
+.cq_reattach
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+.swp
+
+__debug_bin
+#test directories
+**/.test/*
+
+resources/integration_tests/infra/.terraform
+resources/integration_tests/infra/.terraform.lock.hcl
+resources/integration_tests/infra/terraform-override.tf
+resources/integration_tests/infra/tmp/
