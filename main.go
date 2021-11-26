@@ -7,7 +7,8 @@ import (
 
 func main() {
 	serve.Serve(&serve.Options{
-		Name:                "aws",
+		// CHANGEME: change to your provider name
+		Name:                "YourProviderName",
 		Provider:            resources.Provider(),
 		Logger:              nil,
 		NoLogOutputOverride: false,

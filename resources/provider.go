@@ -2,7 +2,7 @@ package resources
 
 import (
 	"embed"
-	// TODO: change the following to your own package
+	// CHANGEME: change the following to your own package
 	"github.com/cloudquery/cq-provider-template/client"
 
 	"github.com/cloudquery/cq-provider-sdk/provider"
@@ -16,7 +16,8 @@ var (
 
 func Provider() *provider.Provider {
 	return &provider.Provider{
-		Name:      "your_provider_name",
+		// CHANGEME: Change to yoru provider name
+		Name:      "YourProviderName",
 		Configure: client.Configure,
 		ResourceMap: map[string]*schema.Table{
 			"demo_resource": DemoResource(),

@@ -17,6 +17,9 @@ type Config struct {
 
 func (c Config) Example() string {
 	return `configuration {
+	// CHANGEME:
+	Here you define your default/example documentation.
+	That is generated with cloudquery init YourProviderName
 	// Optional. if you want to assume role to multiple account and fetch data from them
     //accounts "<YOUR ACCOUNT ID>" {
 	// Optional. Role ARN we want to assume when accessing this account
