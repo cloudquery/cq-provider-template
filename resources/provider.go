@@ -20,6 +20,7 @@ func Provider() *provider.Provider {
 		Name:      "YourProviderName",
 		Configure: client.Configure,
 		ResourceMap: map[string]*schema.Table{
+			// CHANGEME: place here all supported resources
 			"demo_resource": DemoResource(),
 		},
 		Migrations: providerMigrations,

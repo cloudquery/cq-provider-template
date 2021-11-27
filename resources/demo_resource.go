@@ -4,12 +4,13 @@ import (
 	"context"
 
 	"github.com/cloudquery/cq-provider-sdk/provider/schema"
+	// CHANGEME change this to your package name
 	"github.com/cloudquery/cq-provider-template/client"
 )
 
 func DemoResource() *schema.Table {
 	return &schema.Table{
-		Name:     "provider_name_resource_name",
+		Name:     "zoom_users",
 		Resolver: fetchDemoResources,
 		// Those are optional
 		// DeleteFilter: nil,

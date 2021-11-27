@@ -10,7 +10,7 @@ type Client struct {
 	// It will be passed for each resource fetcher.
 	logger hclog.Logger
 
-	// Usually you store here your 3rd party clients and use them in the fetcher
+	// CHANGEME:  Usually you store here your 3rd party clients and use them in the fetcher
 	ThirdPartyClient interface{}
 }
 
@@ -24,7 +24,8 @@ func Configure(logger hclog.Logger, config interface{}) (schema.ClientMeta, erro
 	// Init your client and 3rd party clients using the user's configuration
 	// passed by the SDK providerConfig
 	client := Client{
-		logger:           logger,
+		logger: logger,
+		// CHANGEME: pass the initialized third pard client
 		ThirdPartyClient: nil,
 	}
 
