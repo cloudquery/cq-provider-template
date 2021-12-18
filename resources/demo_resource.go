@@ -10,7 +10,7 @@ import (
 
 func DemoResource() *schema.Table {
 	return &schema.Table{
-		Name:     "zoom_users",
+		Name:     "demo_table",
 		Resolver: fetchDemoResources,
 		// Those are optional
 		// DeleteFilter: nil,
