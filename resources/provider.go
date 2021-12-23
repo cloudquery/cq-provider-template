@@ -12,11 +12,13 @@ import (
 var (
 	//go:embed migrations/*.sql
 	providerMigrations embed.FS
+	Version            = "Development"
 )
 
 func Provider() *provider.Provider {
 	return &provider.Provider{
-		// CHANGEME: Change to yoru provider name
+		Version: Version,
+		// CHANGEME: Change to your provider name
 		Name:      "YourProviderName",
 		Configure: client.Configure,
 		ResourceMap: map[string]*schema.Table{
