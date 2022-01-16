@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	//go:embed migrations/*.sql
+	//go:embed migrations/*/*.sql
 	providerMigrations embed.FS
 	Version            = "Development"
 )
