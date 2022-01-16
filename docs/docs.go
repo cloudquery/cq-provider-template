@@ -27,7 +27,7 @@ func main() {
 
 	}
 
-	if err = docs.GenerateDocs(resources.Provider(), outputPath); err != nil {
+	if err = docs.GenerateDocs(resources.Provider(), outputPath, true); err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to generate docs: %s\n", err)
 	}
 }
