@@ -3,7 +3,7 @@ module github.com/cloudquery/cq-provider-template
 go 1.17
 
 require (
-	github.com/cloudquery/cq-provider-sdk v0.6.2-0.20220116110540-b7a42f90e4b8
+	github.com/cloudquery/cq-provider-sdk v0.6.2-0.20220117103040-fcf06f268435
 	github.com/hashicorp/go-hclog v1.0.0
 )
 
@@ -75,4 +75,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
 
-//replace github.com/cloudquery/cq-provider-sdk  v0.6.2-0.20220116110540-b7a42f90e4b8 => ../cq-provider-sdk
+//replace github.com/cloudquery/cq-provider-sdk v0.6.2-0.20220117103040-fcf06f268435 => ../cq-provider-sdk
