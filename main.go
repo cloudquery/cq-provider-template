@@ -2,12 +2,11 @@ package main
 
 import (
 	"github.com/cloudquery/cq-provider-sdk/serve"
-	// CHANGEME: change this to your package name
-	"github.com/cloudquery/cq-provider-template/resources"
+	"github.com/cloudquery/cq-provider-template/resources/provider"
 )
 
 func main() {
-	p := resources.Provider()
+	p := provider.Provider()
 	serve.Serve(&serve.Options{
 		Name:                p.Name,
 		Provider:            p,
