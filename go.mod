@@ -3,7 +3,7 @@ module github.com/cloudquery/cq-provider-template
 go 1.17
 
 require (
-	github.com/cloudquery/cq-provider-sdk v0.8.19
+	github.com/cloudquery/cq-provider-sdk v0.9.1
 	github.com/hashicorp/go-hclog v1.0.0
 )
 
