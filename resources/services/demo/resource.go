@@ -17,13 +17,13 @@ func Resources() *schema.Table {
 				Name:        "account_id",
 				Description: "The AWS Account ID of the resource.",
 				Type:        schema.TypeString,
-				Resolver:    DemoResolverPath("AccountId"),
+				Resolver:    ResolverPath("AccountId"),
 			},
 			{
 				Name:        "region",
 				Description: "The AWS Region of the resource.",
 				Type:        schema.TypeString,
-				Resolver:    DemoResolver,
+				Resolver:    Resolver,
 			},
 			{
 				Name:        "name",
@@ -52,10 +52,10 @@ func fetchDomainResources(ctx context.Context, meta schema.ClientMeta, parent *s
 //                                                  User Defined Helpers
 // ====================================================================================================================
 
-func DemoResolver(_ context.Context, meta schema.ClientMeta, r *schema.Resource, c schema.Column) error {
+func Resolver(_ context.Context, meta schema.ClientMeta, r *schema.Resource, c schema.Column) error {
 	return nil
 }
-func DemoResolverPath(path string) schema.ColumnResolver {
+func ResolverPath(_ string) schema.ColumnResolver {
 	return nil
 }
 
@@ -63,7 +63,7 @@ type Meta struct {
 	// Creation time of the resource. Delete me
 	CreateDate time.Time
 }
-type DemoResource struct {
+type Resource struct {
 	// The name of demo resource
 	Name string
 	// Metadata of demo resource

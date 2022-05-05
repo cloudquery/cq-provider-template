@@ -7,13 +7,13 @@ description_modifier "remove_read_only" {
 }
 
 resource "demo" "domain" "resource" {
-  path = "github.com/cloudquery/cq-provider-template/resources/services/demo.DemoResource"
+  path = "github.com/cloudquery/cq-provider-template/resources/services/demo.Resource"
 
   userDefinedColumn "account_id" {
     type        = "string"
     description = "The AWS Account ID of the resource."
     resolver "resolveAWSAccount" {
-      path   = "github.com/cloudquery/cq-provider-template/resources/services/demo.DemoResolverPath"
+      path   = "github.com/cloudquery/cq-provider-template/resources/services/demo.ResolverPath"
       params = ["AccountId"]
     }
   }
@@ -21,7 +21,7 @@ resource "demo" "domain" "resource" {
     type        = "string"
     description = "The AWS Region of the resource."
     resolver "demoResolver" {
-      path = "github.com/cloudquery/cq-provider-template/resources/services/demo.DemoResolver"
+      path = "github.com/cloudquery/cq-provider-template/resources/services/demo.Resolver"
     }
   }
 
