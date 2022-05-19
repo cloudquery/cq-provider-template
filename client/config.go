@@ -16,7 +16,7 @@ type Config struct {
 	}
 }
 
-func (c Config) Example() string {
+func (Config) Example() string {
 	return `configuration {
 	// CHANGEME:
 	//Here you define your default/example documentation.

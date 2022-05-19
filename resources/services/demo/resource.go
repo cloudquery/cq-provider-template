@@ -7,6 +7,17 @@ import (
 	"github.com/cloudquery/cq-provider-sdk/provider/schema"
 )
 
+type Meta struct {
+	// Creation time of the resource. Delete me
+	CreateDate time.Time
+}
+type Resource struct {
+	// The name of demo resource
+	Name string
+	// Metadata of demo resource
+	Metadata Meta
+}
+
 //go:generate cq-gen --resource resource --config gen.hcl --output .
 func Resources() *schema.Table {
 	return &schema.Table{
@@ -57,15 +68,4 @@ func Resolver(_ context.Context, meta schema.ClientMeta, r *schema.Resource, c s
 }
 func ResolverPath(_ string) schema.ColumnResolver {
 	return nil
-}
-
-type Meta struct {
-	// Creation time of the resource. Delete me
-	CreateDate time.Time
-}
-type Resource struct {
-	// The name of demo resource
-	Name string
-	// Metadata of demo resource
-	Metadata Meta
 }
