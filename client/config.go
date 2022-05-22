@@ -2,6 +2,11 @@ package client
 
 // Provider Configuration
 
+type ResourceConfig struct {
+	Name  string
+	Other map[string]interface{} `hcl:",inline"`
+}
+
 type Config struct {
 	// here goes top level configuration for your provider
 	// This object will be pass filled in depending on user's configuration
@@ -10,10 +15,7 @@ type Config struct {
 
 	// resources that user asked to fetch
 	// each resource can have optional additional configurations
-	Resources []struct {
-		Name  string
-		Other map[string]interface{} `hcl:",inline"`
-	}
+	Resources []ResourceConfig
 }
 
 func (Config) Example() string {
