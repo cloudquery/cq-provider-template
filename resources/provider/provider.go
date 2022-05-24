@@ -1,8 +1,6 @@
 package provider
 
 import (
-	"embed"
-
 	"github.com/cloudquery/cq-provider-sdk/provider"
 	"github.com/cloudquery/cq-provider-sdk/provider/schema"
 	// CHANGEME: change the following to your own package
@@ -11,9 +9,7 @@ import (
 )
 
 var (
-	//go:embed migrations/*/*.sql
-	providerMigrations embed.FS
-	Version            = "Development"
+	Version = "Development"
 )
 
 func Provider() *provider.Provider {
@@ -26,7 +22,6 @@ func Provider() *provider.Provider {
 			// CHANGEME: place here all supported resources
 			"demo_resource": demo.Resources(),
 		},
-		Migrations: providerMigrations,
 		Config: func() provider.Config {
 			return &client.Config{}
 		},
