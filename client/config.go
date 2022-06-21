@@ -1,5 +1,7 @@
 package client
 
+import "github.com/cloudquery/cq-provider-sdk/cqproto"
+
 // Provider Configuration
 
 type ResourceConfig struct {
@@ -16,10 +18,20 @@ type Config struct {
 	// resources that user asked to fetch
 	// each resource can have optional additional configurations
 	Resources []ResourceConfig
+
+	requestedFormat cqproto.ConfigFormat
 }
 
-func (Config) Example() string {
-	return `configuration {
+func NewConfig(f cqproto.ConfigFormat) *Config {
+	return &Config{
+		requestedFormat: f,
+	}
+}
+
+func (c Config) Example() string {
+	switch c.requestedFormat {
+	case cqproto.ConfigHCL:
+		return `configuration {
 	// CHANGEME:
 	//Here you define your default/example documentation.
 	//That is generated with cloudquery init YourProviderName
@@ -28,4 +40,18 @@ func (Config) Example() string {
 	// api_key = ""	
 }
 `
+	default:
+		return `
+CHANGEME:
+Here you define your default/example documentation.
+That is generated with cloudquery init YourProviderName
+Optional or required parameters
+debug: false
+api_key: ""	
+`
+	}
+}
+
+func (c Config) Format() cqproto.ConfigFormat {
+	return c.requestedFormat
 }

@@ -1,6 +1,7 @@
 package provider
 
 import (
+	"github.com/cloudquery/cq-provider-sdk/cqproto"
 	"github.com/cloudquery/cq-provider-sdk/provider"
 	"github.com/cloudquery/cq-provider-sdk/provider/schema"
 	// CHANGEME: change the following to your own package
@@ -22,8 +23,8 @@ func Provider() *provider.Provider {
 			// CHANGEME: place here all supported resources
 			"demo_resource": demo.Resources(),
 		},
-		Config: func() provider.Config {
-			return &client.Config{}
+		Config: func(f cqproto.ConfigFormat) provider.Config {
+			return client.NewConfig(f)
 		},
 	}
 }
