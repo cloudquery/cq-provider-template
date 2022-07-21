@@ -3,7 +3,7 @@ module github.com/cloudquery/cq-provider-template
 go 1.18
 
 require (
-	github.com/cloudquery/cq-provider-sdk v0.13.5
+	github.com/cloudquery/cq-provider-sdk v0.14.1
 	github.com/hashicorp/go-hclog v1.2.1
 )
 
@@ -19,7 +19,6 @@ require (
 	github.com/georgysavva/scany v1.0.0 // indirect
 	github.com/gofrs/uuid v4.2.0+incompatible // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
-	github.com/google/go-cmp v0.5.8 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-plugin v1.4.4 // indirect
@@ -36,7 +35,6 @@ require (
 	github.com/jackc/pgtype v1.11.0 // indirect
 	github.com/jackc/pgx/v4 v4.16.1 // indirect
 	github.com/jackc/puddle v1.2.1 // indirect
-	github.com/kylelemons/godebug v1.1.0 // indirect
 	github.com/lann/builder v0.0.0-20180802200727-47ae307949d0 // indirect
 	github.com/lann/ps v0.0.0-20150810152359-62de8c46ede0 // indirect
 	github.com/lorenzosaino/go-sysctl v0.3.1 // indirect
@@ -50,7 +48,6 @@ require (
 	github.com/pbnjay/memory v0.0.0-20210728143218-7b4eea64cf58 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/segmentio/stats/v4 v4.6.3 // indirect
-	github.com/sergi/go-diff v1.2.0 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
 	github.com/thoas/go-funk v0.9.2 // indirect
 	github.com/vmihailenco/msgpack/v5 v5.3.5 // indirect
@@ -67,7 +64,7 @@ require (
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/tools v0.1.11 // indirect
 	google.golang.org/genproto v0.0.0-20220314164441-57ef72a4c106 // indirect
-	google.golang.org/grpc v1.47.0 // indirect
+	google.golang.org/grpc v1.48.0 // indirect
 	google.golang.org/protobuf v1.28.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
